@@ -6,7 +6,9 @@
     "autoload": {
         "psr-4": {
             "Router\\": "Router/",
-            "Exceptions\\": "Exceptions/"
+            "Exceptions\\": "Exceptions/",
+            "Controllers\\": "Controllers/",
+            "Source\\": "src/"
         }
     }
 }
