@@ -1,0 +1,12 @@
+{
+    "require": {
+        "mistic100/randomcolor": "^1.0"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Router\\": "Router/",
+            "Exceptions\\": "Exceptions/"
+        }
+    }
+}
