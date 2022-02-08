@@ -4,7 +4,7 @@ namespace Models;
 
 use Source\Constant;
 
-class Model
+abstract class Model
 {
     protected static \PDO $pdo;
     protected string $table;
