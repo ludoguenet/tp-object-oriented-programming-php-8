@@ -2,6 +2,7 @@
 
 namespace Models;
 
+use PDOStatement;
 use Source\Constant;
 
 abstract class Model
@@ -28,6 +29,16 @@ abstract class Model
     public function all(): array
     {
         $statement = $this->getPDO()->query("SELECT * FROM {$this->table}");
+
+        return $statement->fetchAll();
+    }
+
+    public function where(string $column, int $value): array
+    {
+        $statement = $this->getPDO()
+        ->prepare("SELECT * FROM {$this->table} WHERE {$column} = ?");
+
+        $statement->execute([$value]);
 
         return $statement->fetchAll();
     }

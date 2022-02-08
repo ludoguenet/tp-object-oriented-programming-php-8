@@ -11,6 +11,7 @@ define('BASE_VIEW_PATH', dirname(__DIR__) . DIRECTORY_SEPARATOR . 'views'
 $router = new Router();
 
 $router->get('/', ['Controllers\HomeController', 'index']);
+$router->get('/orders', ['Controllers\OrderController', 'index']);
 
 (new App($router, [
     'uri' => $_SERVER['REQUEST_URI'],
